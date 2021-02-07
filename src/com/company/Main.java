@@ -4,24 +4,29 @@ public class Main {
     private static String TEXT = "The end.";
 
     public static void main(String[] args) {
-        System.out.println("Hi");
-        String s = "Hi!";
-
-        System.out.println(s);
-        if (args != null) {
-            String s2 = s;
-
-            System.out.println(s2);
-
-        }
-        Main main = new Main();
-        System.out.println(TEXT);
+        //write your code here
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        Fish fish = new Fish();
+        Woman woman = new Woman();
+        cat.owner = new Woman();
+        dog.owner = new Woman();
+        fish.owner = new Woman();
 
     }
 
-    public String instanceVariable;
+    public static class Cat {
+        public Woman owner;
+    }
 
-    public Main() {
-        instanceVariable = "Instance variable test.";
+    public static class Dog {
+        public Woman owner;
+    }
+
+    public static class Fish {
+        public Woman owner;
+    }
+
+    public static class Woman {
     }
 }
