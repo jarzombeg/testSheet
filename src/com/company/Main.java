@@ -1,17 +1,27 @@
 package com.company;
 
 public class Main {
+    private static String TEXT = "The end.";
+
     public static void main(String[] args) {
-        System.out.println(convertCelsiusToFahrenheit(41));
+        System.out.println("Hi");
+        String s = "Hi!";
+
+        System.out.println(s);
+        if (args != null) {
+            String s2 = s;
+
+            System.out.println(s2);
+
+        }
+        Main main = new Main();
+        System.out.println(TEXT);
+
     }
 
-    public static double convertCelsiusToFahrenheit(int celsius) {
-        //write your code here
-        double one = 9;
-        int two = 5;
-        double bracket = one / two;
-        return bracket * celsius + 32;
+    public String instanceVariable;
+
+    public Main() {
+        instanceVariable = "Instance variable test.";
     }
 }
-
-
