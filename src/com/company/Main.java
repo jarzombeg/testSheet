@@ -2,16 +2,19 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(convertCelsiusToFahrenheit(41));
+
+        int a = 5, b = 7;
+        int m = min(a, b);
+        System.out.println("The minimum is " + m);
     }
 
-    public static double convertCelsiusToFahrenheit(int celsius) {
-        //write your code here
-        double one = 9;
-        int two = 5;
-        double bracket = one / two;
-        return bracket * celsius + 32;
+    public static int min(int c, int d) {
+        int m2;
+        if (c < d)
+            m2 = c;
+        else
+            m2 = d;
+
+        return m2;
     }
 }
-
-
