@@ -4,6 +4,7 @@ package com.company;
 public class Main {
     public static int min(int a, int b, int c, int d) {
         //write your code here
+        min(a,b);
         int m;
         if (a <= b && a < c && a <= d)
             m = a;
