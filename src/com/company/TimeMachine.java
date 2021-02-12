@@ -2,60 +2,31 @@ package com.company;
 
 public class TimeMachine {
 
-    public void goToFuture(int currentYear) {
+        public void goToFuture (Cat cat){
+           // cat = new Cat(cat.age);    uncomment to break it
+            cat.age += 10;
+        }
 
-        currentYear = currentYear+10;
-    }
-
-    public void goToPast(int currentYear) {
-
-        System.out.println("The goToPast method has started running!");
-
-        System.out.println("currentYear inside the goToPast method (at the beginning) = " + currentYear);
-        currentYear = currentYear-10;
-        System.out.println("currentYear inside the goToPast method (at the end) = " + currentYear);
-    }
+        public void goToPast (Cat cat){
+            //cat = new Cat(cat.age);    uncomment to break it
+            cat.age -= 10;
+        }
 
     public static void main(String[] args) {
 
         TimeMachine timeMachine = new TimeMachine();
-        int currentYear = 2018;
 
-        System.out.println("What was the year when the program started?");
-        System.out.println(currentYear);
+        Cat smudge = new Cat(5);
 
-        timeMachine.goToPast(currentYear);
-        System.out.println("And what year is it now?");
-        System.out.println(currentYear);
+        System.out.println("How old was Smudge when the program started?");
+        System.out.println(smudge.age);
+
+        timeMachine.goToFuture(smudge);
+        System.out.println ("Smudge went to the future! Has his age changed?");
+        System.out.println(smudge.age);
+
+        System.out.println ("And if you try going back?");
+        timeMachine.goToPast(smudge);
+        System.out.println(smudge.age);
     }
 }
-
-/*
-
-public class TimeMachine {
-
-
-    public void goToFuture(int currentYear) {
-
-        currentYear = currentYear+10;
-    }
-
-    public void goToPast(int currentYear) {
-
-        currentYear = currentYear-10;
-    }
-
-    public static void main(String[] args) {
-
-        TimeMachine timeMachine = new TimeMachine();
-        int currentYear = 2018;
-
-        System.out.println("What year is it?");
-        System.out.println(currentYear);
-
-        timeMachine.goToPast(currentYear);
-        System.out.println("How about now?");
-        System.out.println(currentYear);
-    }
-}
-*/
