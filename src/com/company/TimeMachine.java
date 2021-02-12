@@ -8,7 +8,7 @@ public class TimeMachine {
         }
 
         public void goToPast (Cat cat){
-            cat = new Cat(cat.age);    //uncomment to break it
+            //cat = new Cat(cat.age);    //uncomment to break it
             cat.age -= 10;
         }
 
