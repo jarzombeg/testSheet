@@ -3,12 +3,12 @@ package com.company;
 public class TimeMachine {
 
         public void goToFuture (Cat cat){
-           // cat = new Cat(cat.age);    uncomment to break it
+            //cat = new Cat(cat.age);    //uncomment to break it
             cat.age += 10;
         }
 
         public void goToPast (Cat cat){
-            //cat = new Cat(cat.age);    uncomment to break it
+            cat = new Cat(cat.age);    //uncomment to break it
             cat.age -= 10;
         }
 
