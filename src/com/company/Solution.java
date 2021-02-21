@@ -6,10 +6,14 @@ public class Solution {
     public static void main(String[] args) {
         //write your code
         int[] horizontalNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineOne = horizontalNumbers[i] + " ";
+
+        //enhanced horizontal loop
+        for (int horizontalNumber : horizontalNumbers) {
+            String lineOne = horizontalNumber + " ";
             System.out.print(lineOne);
         }
+
+        //everything below is normal loop
         System.out.println();
         for (int i = 0; i < horizontalNumbers.length; i++) {
             String lineTwo = (horizontalNumbers[i] * horizontalNumbers[1]) + " ";
