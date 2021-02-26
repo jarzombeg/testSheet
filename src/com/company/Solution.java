@@ -1,63 +1,21 @@
 package com.company;
-
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution {
-    public static void main(String[] args) {
-        //write your code
-        int[] horizontalNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        public static void main(String[] args) throws IOException {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        //enhanced horizontal loop
-        for (int horizontalNumber : horizontalNumbers) {
-            String lineOne = horizontalNumber + " ";
-            System.out.print(lineOne);
-        }
+            String name = reader.readLine();
+            // long version
+            String sNumber1 = reader.readLine();
+            int aNumber1 = Integer.parseInt(sNumber1);
 
-        //everything below is normal loop
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineTwo = (horizontalNumbers[i] * horizontalNumbers[1]) + " ";
-            System.out.print(lineTwo);
+            // same as above but shorter
+            int number2 = Integer.parseInt(reader.readLine());
+
+            System.out.println(name + " will receive " + aNumber1 + " in " +  number2 + " years.");
+
         }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineThree = (horizontalNumbers[i] * horizontalNumbers[2]) + " ";
-            System.out.print(lineThree);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineFour = (horizontalNumbers[i] * horizontalNumbers[3]) + " ";
-            System.out.print(lineFour);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineFive = (horizontalNumbers[i] * horizontalNumbers[4]) + " ";
-            System.out.print(lineFive);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineSix = (horizontalNumbers[i] * horizontalNumbers[5]) + " ";
-            System.out.print(lineSix);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineSeven = (horizontalNumbers[i] * horizontalNumbers[6]) + " ";
-            System.out.print(lineSeven);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineEight = (horizontalNumbers[i] * horizontalNumbers[7]) + " ";
-            System.out.print(lineEight);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineNine = (horizontalNumbers[i] * horizontalNumbers[8]) + " ";
-            System.out.print(lineNine);
-        }
-        System.out.println();
-        for (int i = 0; i < horizontalNumbers.length; i++) {
-            String lineTen = (horizontalNumbers[i] * horizontalNumbers[9]) + " ";
-            System.out.print(lineTen);
-        }
-        }
-    }
+}
