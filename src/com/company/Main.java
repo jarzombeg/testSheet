@@ -1,65 +1,50 @@
 package com.company;
 
-public class Main {
-/*    public static void main(String[] args) {
-        Student jen = new Student();
-        jen.name = "Jen";
-        jen.age = 21;
+class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        Animal cat = new Cat();
 
-        Student beth = new Student();
-        beth.name = "Beth";
-        beth.age = 15;
+        dog.swim();
+        cat.swim();
+        dog.play();
+        cat.play();
 
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
+    }
+}
 
-        ageSwap(jen, beth);
+interface Swimmer {
+    void swim();
+}
 
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
+interface Player {
+    void play();
+}
+
+//implement the Swimmer and the Player interfaces
+abstract class Animal implements Swimmer, Player {
+}
+
+class Dog extends Animal {
+    //Override the swim() and the play() methods
+    public void swim() {
+        System.out.println("Dog is swimming");
     }
 
-    private static void ageSwap(Student a,
-                                Student b)
-    {
-        int c = a.age;
-        a.age = b.age;
-        b.age = c;
+    public void play() {
+        System.out.println("Dog is playing");
     }
 
-    static class Student
-    {
-        String name;
-        int age;
-    }
-}*/
+}
 
-    public static void main(String[] args)
-    {
-        Student jen = new Student();
-        jen.name = "Jen";
-        jen.age = 21;
-
-        Student beth = new Student();
-        beth.name = "Beth";
-        beth.age = 15;
-
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
-
-        Student a = jen, b = beth;
-
-        int c = a.age;
-        a.age = b.age;
-        b.age = c;
-
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
+class Cat extends Animal {
+    //Override the swim() and the play() methods
+    public void swim() {
+        System.out.println("Cat is swimming");
     }
 
-    static class Student
-    {
-        String name;
-        int age;
+    public void play() {
+        System.out.println("Cat is playing");
     }
+
 }
