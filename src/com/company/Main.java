@@ -1,65 +1,29 @@
 package com.company;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
-/*    public static void main(String[] args) {
-        Student jen = new Student();
-        jen.name = "Jen";
-        jen.age = 21;
+            public static void main(String[] args) {
 
-        Student beth = new Student();
-        beth.name = "Beth";
-        beth.age = 15;
+                Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
+                try {
+                    int num1 = scanner.nextInt();
+                    int num2 = scanner.nextInt();
+	        /*
+	        1. Еrror: division by zero
+	        2. Error: wrong value type
+	        */
+                    //your code goes here
+                    int div = num1 / num2;
+                    System.out.println(div);
 
-        ageSwap(jen, beth);
+                } catch (ArithmeticException e) {
+                    System.out.println("Error: division by zero");
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: wrong value type");
 
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
-    }
+                }
 
-    private static void ageSwap(Student a,
-                                Student b)
-    {
-        int c = a.age;
-        a.age = b.age;
-        b.age = c;
-    }
-
-    static class Student
-    {
-        String name;
-        int age;
-    }
-}*/
-
-    public static void main(String[] args)
-    {
-        Student jen = new Student();
-        jen.name = "Jen";
-        jen.age = 21;
-
-        Student beth = new Student();
-        beth.name = "Beth";
-        beth.age = 15;
-
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
-
-        Student a = jen, b = beth;
-
-        int c = a.age;
-        a.age = b.age;
-        b.age = c;
-
-        System.out.println("Jen is " + jen.age);
-        System.out.println("Beth is " + beth.age);
-    }
-
-    static class Student
-    {
-        String name;
-        int age;
-    }
-}
+            }
+        }
